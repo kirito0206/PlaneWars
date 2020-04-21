@@ -225,10 +225,12 @@ public class ShootMain extends View {
         hero.paintObject(g);
         // 画敌人
         for (int i = 0; i < flys.length; i++) {
-            flys[i].paintObject(g);
+            if (flys[i] != null)
+                flys[i].paintObject(g);
         }
         for (int i = 0; i < bullets.length; i++) {
-            bullets[i].paintObject(g);
+            if (bullets[i] != null)
+                bullets[i].paintObject(g);
         }
 
         paint.setTextSize(60);
